@@ -4,7 +4,7 @@ import 'package:app_gestao/src/shared/models/global_hf_escolas_model.dart';
 import 'package:app_gestao/src/shared/models/global_marcas_produtos_model.dart';
 import 'package:flutter/material.dart';
 import 'package:app_gestao/src/shared/functions/error_return.dart';
-import 'package:app_gestao/src/shared/models/global_Fornecedores_model.dart';
+import 'package:app_gestao/src/shared/models/global_fornecedores_model.dart';
 import 'package:app_gestao/src/shared/models/global_categorias_produtos_model.dart';
 import 'package:app_gestao/src/shared/models/global_clientes_model.dart';
 import 'package:app_gestao/src/shared/models/global_despesas_model.dart';

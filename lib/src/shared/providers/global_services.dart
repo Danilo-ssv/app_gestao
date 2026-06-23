@@ -4,7 +4,7 @@ import 'package:app_gestao/src/shared/providers/local_storage_provider.dart';
 import 'package:dio/dio.dart';
 import 'package:app_gestao/src/shared/constants/api_routes.dart';
 import 'package:app_gestao/src/shared/functions/error_return.dart';
-import 'package:app_gestao/src/shared/models/global_Fornecedores_model.dart';
+import 'package:app_gestao/src/shared/models/global_fornecedores_model.dart';
 import 'package:app_gestao/src/shared/models/global_categorias_produtos_model.dart';
 import 'package:app_gestao/src/shared/models/global_clientes_model.dart';
 import 'package:app_gestao/src/shared/models/global_despesas_model.dart';

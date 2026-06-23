@@ -62,46 +62,83 @@ class MyApp extends StatelessWidget {
         // Essencial
         Provider(create: (context) => ApiProvider()),
         ChangeNotifierProvider(create: (context) => LocalStorageProvider()),
-        Provider(create: (context) => AuthenticationServices(context.read(), context.read())),
-        ChangeNotifierProvider(create: (context) => AuthenticationState(context.read(), context.read())),
-        Provider(create: (context) => GlobalServices(context.read(), context.read())),
+        Provider(
+            create: (context) =>
+                AuthenticationServices(context.read(), context.read())),
+        ChangeNotifierProvider(
+            create: (context) =>
+                AuthenticationState(context.read(), context.read())),
+        Provider(
+            create: (context) =>
+                GlobalServices(context.read(), context.read())),
         Provider(create: (context) => GlobalProvider(context.read())),
         // HOME
-        Provider(create: (context) => HomeServices(context.read(), context.read())),
+        Provider(
+            create: (context) => HomeServices(context.read(), context.read())),
         ChangeNotifierProvider(create: (context) => HomeState(context.read())),
         // CLIENTES
-        Provider(create: (context) => ClientesServices(context.read(), context.read())),
-        ChangeNotifierProvider(create: (context) => ClientesState(context.read())),
+        Provider(
+            create: (context) =>
+                ClientesServices(context.read(), context.read())),
+        ChangeNotifierProvider(
+            create: (context) => ClientesState(context.read())),
         // PRODUTOS
-        Provider(create: (context) => ProdutosServices(context.read(), context.read())),
-        ChangeNotifierProvider(create: (context) => ProdutosState(context.read())),
+        Provider(
+            create: (context) =>
+                ProdutosServices(context.read(), context.read())),
+        ChangeNotifierProvider(
+            create: (context) => ProdutosState(context.read())),
         // AGENDA
         // Provider(create: (context) => ClientesServices(context.read(), context.read())),
         // ChangeNotifierProvider(create: (context) => ClientesState(context.read())),
         // USUARIOS
-        Provider(create: (context) => UsuariosServices(context.read(), context.read())),
-        ChangeNotifierProvider(create: (context) => UsuariosState(context.read())),
+        Provider(
+            create: (context) =>
+                UsuariosServices(context.read(), context.read())),
+        ChangeNotifierProvider(
+            create: (context) => UsuariosState(context.read())),
         // FORNECEDORES
-        Provider(create: (context) => FornecedoresServices(context.read(), context.read())),
-        ChangeNotifierProvider(create: (context) => FornecedoresState(context.read())),
+        Provider(
+            create: (context) =>
+                FornecedoresServices(context.read(), context.read())),
+        ChangeNotifierProvider(
+            create: (context) => FornecedoresState(context.read())),
         // CATEGORIAS PRODUTOS
-        Provider(create: (context) => CategoriasProdutosServices(context.read(), context.read())),
-        ChangeNotifierProvider(create: (context) => CategoriasProdutosState(context.read())),
+        Provider(
+            create: (context) =>
+                CategoriasProdutosServices(context.read(), context.read())),
+        ChangeNotifierProvider(
+            create: (context) => CategoriasProdutosState(context.read())),
         // DESPESAS
-        Provider(create: (context) => DespesasServices(context.read(), context.read())),
-        ChangeNotifierProvider(create: (context) => DespesasState(context.read())),
+        Provider(
+            create: (context) =>
+                DespesasServices(context.read(), context.read())),
+        ChangeNotifierProvider(
+            create: (context) => DespesasState(context.read())),
         // CONTAS A PAGAR
-        Provider(create: (context) => ContasPagarServices(context.read(), context.read())),
-        ChangeNotifierProvider(create: (context) => ContasPagarState(context.read())),
+        Provider(
+            create: (context) =>
+                ContasPagarServices(context.read(), context.read())),
+        ChangeNotifierProvider(
+            create: (context) => ContasPagarState(context.read())),
         // CONTAS A RECEBER
-        Provider(create: (context) => ContasReceberServices(context.read(), context.read())),
-        ChangeNotifierProvider(create: (context) => ContasReceberState(context.read())),
+        Provider(
+            create: (context) =>
+                ContasReceberServices(context.read(), context.read())),
+        ChangeNotifierProvider(
+            create: (context) => ContasReceberState(context.read())),
         // MARCAS PRODUTOS
-        Provider(create: (context) => MarcasProdutosServices(context.read(), context.read())),
-        ChangeNotifierProvider(create: (context) => MarcasProdutosState(context.read())),
+        Provider(
+            create: (context) =>
+                MarcasProdutosServices(context.read(), context.read())),
+        ChangeNotifierProvider(
+            create: (context) => MarcasProdutosState(context.read())),
         // VENDAS
-        Provider(create: (context) => VendasServices(context.read(), context.read())),
-        ChangeNotifierProvider(create: (context) => VendasState(context.read())),
+        Provider(
+            create: (context) =>
+                VendasServices(context.read(), context.read())),
+        ChangeNotifierProvider(
+            create: (context) => VendasState(context.read())),
       ],
       child: MaterialApp(
         scrollBehavior: MyCustomScrollBehavior(),
@@ -128,7 +165,7 @@ class MyApp extends StatelessWidget {
             shadowColor: Colors.black54,
             elevation: 2,
           ),
-          tabBarTheme: const TabBarTheme(
+          tabBarTheme: const TabBarThemeData(
             unselectedLabelStyle: TextStyle(fontSize: 15, color: Colors.black),
             labelStyle: TextStyle(fontSize: 15, color: Colors.black),
           ),
@@ -154,8 +191,9 @@ class MyApp extends StatelessWidget {
               fillColor: Colors.white,
             ),
           ),
-          dialogTheme: const DialogTheme(backgroundColor: Colors.white),
-          bottomSheetTheme: const BottomSheetThemeData(backgroundColor: Colors.white),
+          dialogTheme: const DialogThemeData(backgroundColor: Colors.white),
+          bottomSheetTheme:
+              const BottomSheetThemeData(backgroundColor: Colors.white),
           // pageTransitionsTheme: const PageTransitionsTheme(
           //   builders: {
           //     TargetPlatform.android: CustomTransitionBuilder(),
